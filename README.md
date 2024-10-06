@@ -9,3 +9,7 @@ olemasolevaid tube, vaadata broneeringuid ning kinnitada või tühistada broneer
 ## Kasutamine
 
 Külaline saab vaadata kõiki tube, valida endale sobiva toa ning broneerida selle.
+
+## Demo
+
+https://lembitlindau.github.io/shiny-carnival/
