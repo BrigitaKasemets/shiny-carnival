@@ -55,6 +55,14 @@
 <div id="broneeringuKinnitus"></div>
 
 <script>
+    // Lisame valikud tubade arvu jaoks
+    const toadSelect = document.getElementById('toad');
+    for (let i = 1; i <= 10; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i + ' tuba';
+        toadSelect.appendChild(option);
+    }
 
     // Broneerimise funktsioon
     function broneeri() {
