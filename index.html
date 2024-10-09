@@ -39,10 +39,7 @@
 <form id="broneerimisVorm">
     <label for="toad">Vali tubade arv:</label>
     <select id="toad">
-        <option value="1">1 tuba</option>
-        <option value="2">2 tuba</option>
-        <option value="3">3 tuba</option>
-        <option value="4">4 tuba</option>
+
     </select>
     <br>
     <label for="kuupaev">Vali kuupäev:</label>
@@ -57,7 +54,7 @@
 <script>
     // Lisame valikud tubade arvu jaoks
     const toadSelect = document.getElementById('toad');
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 20; i++) {
         const option = document.createElement('option');
         option.value = i;
         option.textContent = i + ' tuba';
