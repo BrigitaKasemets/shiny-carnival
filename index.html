@@ -1,58 +1,83 @@
+<!-- määrab faili tüübi -->
 <!DOCTYPE html>
+<!-- määrab dokumendi keele -->
 <html lang="et">
+<!-- päise viide-->
 <head>
+<!-- määrab dokumendi kooditüübi -->
     <meta charset="UTF-8">
+<!-- määrab skaleeringu -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- määrab lehe pealkirja -->
     <title>Hotelli tubade broneerimine</title>
+<!-- stiilide lisamine -->
     <style>
+/* määrab teksti põhiosa stiili */
         body {
+/* määrab teksti fondi */
             font-family: Arial, sans-serif;
+/* määrab teksti värvi */
             background-color: #f5f5f5;
+/* määrab teksti joonduse */
             text-align: center;
+/* määrab teksti suuruse */
             padding: 50px;
         }
-
+/* määrab pealkirja suuruse */
         input, select {
             padding: 10px;
             margin: 10px;
             font-size: 16px;
         }
-
+/* määrab nupu suuruse */
         button {
             padding: 10px 20px;
             font-size: 16px;
+/* määrab kursori tüübi */
             cursor: pointer;
         }
-
+/* määrab nupu asukoha, värvi ja fondi tüübi */
         #broneeringuKinnitus {
             margin-top: 20px;
             color: green;
             font-weight: bold;
         }
+/* stiilide lõpp põhitekstile*/
     </style>
+<!-- päise lõpp -->
 </head>
+<!-- keha viide -->
 <body>
 
+<!-- Pealkiri -->
 <h2>Hotelli tubade broneerimine</h2>
 
-<!-- Toad ja kuupäeva sisestus -->
+<!-- määrab vormi pealkirja -->
 <form id="broneerimisVorm">
+<!-- määrab vormi meetodi ja tegevuse -->
     <label for="toad">Vali tubade arv:</label>
+<!-- määrab vormi välja tüübi ja nime -->
     <select id="toad">
-
+<!-- nupp valiku tegemiseks -->
     </select>
+<!-- element, mis poolitab rea -->
     <br>
+<!-- nupu pealkiri -->
     <label for="kuupaev">Vali kuupäev:</label>
+<!-- määrab vormi välja tüübi ja nime -->
     <input type="date" id="kuupaev" required>
+<!-- element, mis poolitab rea -->
     <br>
+<!-- nupu pealkiri -->
     <button type="button" onclick="broneeri()">Broneeri</button>
+<!-- vormi lõpp -->
 </form>
 
-<!-- Broneeringu kinnitus -->
+<!-- kuvab broneeringu kinnituse -->
 <div id="broneeringuKinnitus"></div>
-
+<!-- skripti lisamine -->
 <script>
-    // Lisame valikud tubade arvu jaoks
+    // Loob valikud tubade arvu valimiseks
     const toadSelect = document.getElementById('toad');
     for (let i = 1; i <= 20; i++) {
         const option = document.createElement('option');
@@ -64,21 +89,23 @@
     // Broneerimise funktsioon
     function broneeri() {
 
-        // Hankige kasutaja valikud
+        // Hangib kasutaja valitud toad ja kuupäeva
         const toad = document.getElementById('toad').value;
         const kuupaev = document.getElementById('kuupaev').value;
 
-        // Kontrollige, kas kuupäev on valitud
+        // Kontrollib, kas mõlemad väljad on täidetud
         if (!kuupaev) {
             alert('Palun valige kuupäev!');
+            // Katkestab funktsiooni töö
             return;
         }
 
         // Kuvatakse broneeringu kinnitus
         document.getElementById('broneeringuKinnitus').innerHTML = 'Broneerisite ' + toad + ' toad kuupäeval ' + kuupaev + '.';
     }
+    // skripti lõpp
 </script>
-
+<!-- keha lõpp -->
 </body>
+<!-- html lõpp -->
 </html>
-
