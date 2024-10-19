@@ -79,10 +79,15 @@
 <script>
     // Loob valikud tubade arvu valimiseks
     const toadSelect = document.getElementById('toad');
+    // Loob valikud 1-20
     for (let i = 1; i <= 20; i++) {
+        // Loob valiku elemendi
         const option = document.createElement('option');
+        // Määrab valiku väärtuse
         option.value = i;
+        // Määrab valiku teksti
         option.textContent = i + ' tuba';
+        // Lisab valiku valikute hulka
         toadSelect.appendChild(option);
     }
 
