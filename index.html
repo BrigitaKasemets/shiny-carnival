@@ -1,75 +1,60 @@
-<!DOCTYPE html>                                                                                                         <!-- määrab faili tüübi -->
-<html lang="et">                                                                                                        <!-- määrab keele -->
-<head>                                                                                                                  <!-- päise viide-->
-    <meta charset="UTF-8">                                                                                              <!-- määrab märgistiku -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">                                              <!-- määrab skaleeringu-->
-    <title>Hotelli tubade broneerimine</title>                                                                          <!-- määrab pealkirja -->
-<!-- stiilide lisamine -->
-    <style>
-/* määrab teksti põhiosa stiili */
+<!-- Määrab dokumendi tüübi ja keele -->
+<!DOCTYPE html>
+<html lang="et">
+
+<!-- Määrab dokumendi pealkirja ja stiili -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotelli tubade broneerimine</title>
+<style>
+        /* Määrab lehe stiili */
         body {
-/* määrab teksti fondi */
             font-family: Arial, sans-serif;
-/* määrab teksti värvi */
             background-color: #f5f5f5;
-/* määrab teksti joonduse */
             text-align: center;
-/* määrab teksti suuruse */
             padding: 50px;
         }
-/* määrab pealkirja suuruse */
+        /* Määrab vormi stiili */
         input, select {
             padding: 10px;
             margin: 10px;
             font-size: 16px;
         }
-/* määrab nupu suuruse */
+        /* Määrab nupu stiili */
         button {
             padding: 10px 20px;
             font-size: 16px;
-/* määrab kursori tüübi */
+            background-color: #4CAF50;
             cursor: pointer;
         }
-/* määrab nupu asukoha, värvi ja fondi tüübi */
+        /* Määrab broneeringu kinnituse stiili */
         #broneeringuKinnitus {
             margin-top: 20px;
             color: green;
             font-weight: bold;
         }
-/* stiilide lõpp */
+/* stiili lõpp */
     </style>
-<!-- päise lõpp -->
 </head>
-<!-- keha viide -->
 <body>
 
-<!-- Pealkiri -->
+<!-- Määrab lehe sisu -->
 <h2>Hotelli tubade broneerimine</h2>
-
-<!-- määrab vormi pealkirja -->
+<!-- Määrab vormi broneerimiseks -->
 <form id="broneerimisVorm">
-<!-- määrab vormi meetodi ja tegevuse -->
     <label for="toad">Vali tubade arv:</label>
-<!-- määrab vormi välja tüübi ja nime -->
     <select id="toad">
-<!-- nupp valiku tegemiseks -->
     </select>
-<!-- element, mis poolitab rea -->
     <br>
-<!-- nupu pealkiri -->
     <label for="kuupaev">Vali kuupäev:</label>
-<!-- määrab vormi välja tüübi ja nime -->
     <input type="date" id="kuupaev" required>
-<!-- element, mis poolitab rea -->
     <br>
-<!-- nupu pealkiri -->
     <button type="button" onclick="broneeri()">Broneeri</button>
-<!-- vormi lõpp -->
 </form>
-
-<!-- kuvab broneeringu kinnituse -->
+<!-- Määrab broneeringu kinnituse -->
 <div id="broneeringuKinnitus"></div>
-<!-- skripti lisamine -->
+<!-- Määrab skripti -->
 <script>
     // Loob valikud tubade arvu valimiseks
     const toadSelect = document.getElementById('toad');
