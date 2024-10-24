@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotelli tubade broneerimine</title>
 
-    /* Määrab lehe stiili */
+    <!-- Määrab stiili -->
 <style>
     /* Määrab teksti stiili */
         body {
@@ -41,7 +41,7 @@
 </head>
 <body>
 
-<!-- Määrab lehe sisu -->
+<!-- Määrab lehe pealkirja -->
 <h2>Hotelli tubade broneerimine</h2>
 <!-- Määrab vormi broneerimiseks -->
 <form id="broneerimisVorm">
@@ -56,18 +56,25 @@
 </form>
 <!-- Määrab broneeringu kinnituse -->
 <div id="broneeringuKinnitus"></div>
+
 <!-- Määrab skripti -->
 <script>
+
     // Loob valikud tubade arvu valimiseks
     const toadSelect = document.getElementById('toad');
+
     // Loob valikud 1-20
     for (let i = 1; i <= 20; i++) {
+
         // Loob valiku elemendi
         const option = document.createElement('option');
+
         // Määrab valiku väärtuse
         option.value = i;
+
         // Määrab valiku teksti
         option.textContent = i + ' tuba';
+
         // Lisab valiku valikute hulka
         toadSelect.appendChild(option);
     }
@@ -82,6 +89,7 @@
         // Kontrollib, kas mõlemad väljad on täidetud
         if (!kuupaev) {
             alert('Palun valige kuupäev!');
+
             // Katkestab funktsiooni töö
             return;
         }
@@ -89,6 +97,7 @@
         // Kuvatakse broneeringu kinnitus
         document.getElementById('broneeringuKinnitus').innerHTML = 'Broneerisite ' + toad + ' toad kuupäeval ' + kuupaev + '.';
     }
+
     // skripti lõpp
 </script>
 <!-- keha lõpp -->
